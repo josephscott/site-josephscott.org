@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+	{{ with .OutputFormats.Get "rss" }}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end }}
+	<style>
+		{{ readFile "/themes/burgontan/static/css/theme.css" | safeCSS }}
+		{{ if .Site.Params.mainColor }}
+			:root { --main-color: {{ .Site.Params.mainColor | safeCSS }}; }
+		{{ end }}
+		{{ if .Site.Params.linkHoverColor }}
+			:root { --content-linkhover-color: {{ .Site.Params.linkHoverColor | safeCSS }}; }
+		{{ end }}
+	</style>
+</head>
+<body>
+<div class="page">
+
+	<div class="sidebar">
+		<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+
+		<ul class="nobullets">
+			{{ if .Site.GetPage "/about" }}
+				<li><a href="{{ .Site.BaseURL }}about">/about</a></li>
+			{{ end }}
+			{{ if .Site.GetPage "/contact" }}
+				<li><a href="{{ .Site.BaseURL }}contact">/contact</a></li>
+			{{ end }}
+			<li><a href="{{ .Site.BaseURL }}tags">/tags</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+

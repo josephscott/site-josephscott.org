@@ -1,0 +1,12 @@
+name = "burgontan"
+license = "MIT"
+licenselink = "https://github.com/josephscott/burgontan/blob/trunk/LICENSE"
+description = "A blog theme."
+homepage = "https://github.com/josephscott/burgontan"
+min_version = "0.83.1"
+tags = [ "blog" ]
+features = [ "responsive" ]
+
+[author]
+	name = "Joseph Scott"
+	homepage = "https://josephscott.org/"
