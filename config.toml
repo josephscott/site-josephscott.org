@@ -1,6 +1,7 @@
 baseURL = "https://josephscott.org/"
 languageCode = "en-us"
 title = "Joseph Scott"
+disableHugoGeneratorInject = true
 
 theme = "burgontan"
 
