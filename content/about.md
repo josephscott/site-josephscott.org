@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About Joseph Scott"
 layout: staticpage
 draft: false
 ---
