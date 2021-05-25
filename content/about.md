@@ -11,6 +11,9 @@ svg.social {
 .contact-me {
 	text-align: center;
 }
+.contact-me img {
+	border-radius: 20px;
+}
 .contact-me a:hover {
 	background-color: #fff;
 }
