@@ -9,6 +9,7 @@ svg.social {
 	padding: 0 7px;
 }
 .contact-me {
+	float: left;
 	text-align: center;
 }
 .contact-me img {
