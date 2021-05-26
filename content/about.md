@@ -10,6 +10,7 @@ svg.social {
 }
 .contact-me {
 	float: left;
+	padding-right: 30px;
 	text-align: center;
 }
 .contact-me img {
@@ -17,6 +18,12 @@ svg.social {
 }
 .contact-me a:hover {
 	background-color: #fff;
+}
+
+@media ( max-width: 850px ) {
+	#about-text {
+		clear: both;
+	}
 }
 </style>
 
@@ -28,4 +35,8 @@ svg.social {
 		<a title="josephscott.org/index.xml" href="https://josephscott.org/index.xml"><svg class="social" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-rss-fill" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg></a>
 		<a title="joseph@josephscott.org" href="mailto:joseph@josephscott.org"><svg class="social" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg></a>
 	</div>
+</div>
+
+<div id="about-text">
+
 </div>
