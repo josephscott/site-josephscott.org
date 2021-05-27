@@ -8,6 +8,9 @@ draft: false
 svg.social {
 	padding: 0 7px;
 }
+svg.social:hover {
+	color: var(--nav-hover-color);
+}
 .contact-me {
 	float: left;
 	padding-right: 30px;
@@ -15,6 +18,16 @@ svg.social {
 }
 .contact-me img {
 	border-radius: 20px;
+	box-shadow:
+		0 0.3px 2.1px rgba(0, 0, 0, 0.077),
+		0 0.8px 4.8px rgba(0, 0, 0, 0.112),
+		0 1.5px 8.7px rgba(0, 0, 0, 0.138),
+		0 2.4px 14.5px rgba(0, 0, 0, 0.162),
+		0 4px 23.8px rgba(0, 0, 0, 0.188),
+		0 6.9px 41.6px rgba(0, 0, 0, 0.223),
+		0 15px 90px rgba(0, 0, 0, 0.3)
+	;
+	margin-bottom: 20px;
 }
 .contact-me a:hover {
 	background-color: #fff;
