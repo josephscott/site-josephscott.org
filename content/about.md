@@ -27,7 +27,7 @@ svg.social:hover {
 		0 6.9px 41.6px rgba(0, 0, 0, 0.223),
 		0 15px 90px rgba(0, 0, 0, 0.3)
 	;
-	margin-bottom: 20px;
+	margin: 20px;
 }
 .contact-me a:hover {
 	background-color: #fff;
