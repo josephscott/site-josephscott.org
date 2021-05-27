@@ -39,4 +39,8 @@ svg.social {
 
 <div id="about-text">
 
+By day ( and sometimes night ) I lead the performance team at <a href="https://automattic.com/">Automattic</a>.  My wife and I try to keep up with our four kids, living along the Wasatch Front in Utah.  From time to time you'll find me writing on what ever I find interesting a <a href="https://josephscott.org/">josephscott.org</a>.
+
+You are welcome to contact me via email at <a href="mailto:joseph@josephscott.org">joseph@josephscott.org</a>.
+
 </div>
