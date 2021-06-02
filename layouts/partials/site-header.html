@@ -1,0 +1,10 @@
+
+{{ if not .IsHome }}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@josephscott" />
+	<meta name="twitter:creator" content="@josephscott" />
+	<meta name="twitter:title" content="{{ .Title }}" />
+	<!-- <meta name="twitter:description" content="{{ .Permalink }}" /> -->
+	<meta name="twitter:image" content="{{ .Site.BaseURL }}images/js-square.png" />
+{{ end }}
+
