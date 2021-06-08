@@ -1,1 +1,1 @@
-# site-josephscott.org
+# https://josephscott.org/
