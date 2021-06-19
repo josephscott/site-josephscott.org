@@ -7,8 +7,5 @@ theme = "burgontan"
 
 rssLimit = 25
 
-[params]
-githubcomments = "josephscott/site-josephscott.org"
-
 [markup.goldmark.renderer]
 unsafe= true
