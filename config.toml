@@ -2,6 +2,7 @@ baseURL = "https://josephscott.org/"
 languageCode = "en-us"
 title = "Joseph Scott"
 disableHugoGeneratorInject = true
+copyright = "© Copyright {year} Joseph Scott"
 
 theme = "burgontan"
 
@@ -9,3 +10,10 @@ rssLimit = 25
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[[menu.main]]
+	name = "Tags"
+	url = "/tags"
+[[menu.main]]
+	name = "Archive"
+	url = "/archive"
