@@ -1,0 +1,38 @@
+
+<script>
+(function () {
+"use strict";
+
+window.addEventListener( "load", (event) => {
+	if (
+		!window.performance
+		|| !window.performance.timing
+	) {
+		console.log( "No performance data" );
+		return;
+	}
+	
+	let now = Math.floor( Date.now() / 1000 );
+	let perf = window.performance.timing;
+
+	let data = [
+		{
+			"name": "josephscott-org.rum.navt.dns",
+			"interval": 1,
+			"value": perf.domainLookupEnd - perf.domainLookupStart,
+			"time": now.toString()
+		}
+	];
+
+	fetch( "https://graphite-us-central1.grafana.net/metrics", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			"Authorization": "Bearer 147080:eyJrIjoiNjFlNDQ0MDZhZmFkYWU4ZjEwYTJhOGQ5NzlhYzlkYjkwNzNlNjA0MSIsIm4iOiJydW0iLCJpZCI6NTE0NjE3fQ=="
+		},
+		body: JSON.stringify( data ),
+	})
+});
+
+})();
+</script>
