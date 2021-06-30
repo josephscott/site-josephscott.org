@@ -1,7 +1,7 @@
 ---
 title: Remy Sharp - The web didn't change; you did
-date: 28 Jun 2021
-draft: true
+date: 29 Jun 2021
+draft: false
 tags: [ "remy-sharp", "web", "alex-russell" ]
 ---
 
