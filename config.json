@@ -1,0 +1,28 @@
+{
+	"baseURL": "https://josephscott.org/",
+	"copyright": "© Copyright {year} Joseph Scott",
+	"disableHugoGeneratorInject": true,
+	"languageCode": "en-us",
+	"rssLimit": 25,
+	"theme": "burgontan",
+	"title": "Joseph Scott",
+	"markup": {
+		"goldmark": {
+			"renderer": {
+				"unsafe": true
+			}
+		}
+	},
+	"menu": {
+		"main": [
+			{
+				"name": "Tags",
+				"url": "/tags"
+			},
+			{
+				"name": "Archive",
+				"url": "/archive"
+			}
+		]
+	}
+}
