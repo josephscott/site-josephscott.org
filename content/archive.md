@@ -1,5 +1,5 @@
----
-title: "Posts Archive"
-layout: archive
-hidden: true
----
+{
+	"title": "Posts Archive",
+	"layout": "archive",
+	"hidden": "true"
+}
