@@ -1,6 +1,6 @@
 {
 	"title": "Example",
-	"date": "20 Feb 2020",
+	"date": "1 Jul 2021",
 	"draft": "true",
 	"tags": [
 		"example"
