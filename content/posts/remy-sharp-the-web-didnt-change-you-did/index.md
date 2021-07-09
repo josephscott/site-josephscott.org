@@ -23,7 +23,7 @@ In theory we are all constantly weighing the value of additonal complexity and s
 
 That is how you end up with [a 27 megabyte bundle of JavaScript](https://twitter.com/_developit/status/1409234922703835144) on a page.
 
-<a href="https://twitter.com/_developit/status/1409234922703835144"><img src="27mb-js.png" alt="Jason Miller Tweet" loading="lazy"></a>
+<a href="https://twitter.com/_developit/status/1409234922703835144"><img src="27mb-js.png" alt="Jason Miller Tweet" loading="lazy" decoding="async"></a>
 
 With very few exceptions I think we can easily agree that a 27 MB JavaScript bundle is too big.
 
