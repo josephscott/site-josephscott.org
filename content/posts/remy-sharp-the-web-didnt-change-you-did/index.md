@@ -1,9 +1,13 @@
----
-title: Remy Sharp - The web didn't change; you did
-date: 29 Jun 2021
-draft: false
-tags: [ "remy-sharp", "web", "alex-russell" ]
----
+{
+	"title": "Remy Sharp - The web didn't change; you did",
+	"date": "29 Jun 2021",
+	"draft": "false",
+	"tags": [
+		"remy-sharp",
+		"web",
+		"alex-russell"
+	]
+}
 
 In February 2021 [Remy Sharp](https://remysharp.com/) captured the feelings of many web developers in: [The web didn't change; you did](https://remysharp.com/2021/02/11/the-web-didnt-change-you-did) :
 
