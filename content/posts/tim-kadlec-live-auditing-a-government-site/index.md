@@ -1,5 +1,5 @@
 {
-	"title": "Tim Kadlec, Live Auditing a Government Site",
+	"title": "Tim Kadlec - Live Auditing a Government Site",
 	"date": "9 Jul 2021",
 	"draft": "true",
 	"tags": [
