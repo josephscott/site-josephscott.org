@@ -1,0 +1,21 @@
+{
+  "title": "Joseph Scott",
+  "url": "https://josephscott.org/",
+  "language": "en",
+  "description": "Joseph Scott",
+  "feed": {
+    "subtitle": "",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://josephscott.org/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://josephscott.org/feed/feed.json"
+  },
+  "author": {
+    "name": "Joseph Scott",
+    "email": "joseph@josephscott.org",
+    "url": "https://josephscott.org/"
+  }
+}
