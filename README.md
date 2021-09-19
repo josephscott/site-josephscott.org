@@ -1,1 +1,0 @@
-# https://josephscott.org/
