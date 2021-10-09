@@ -7,7 +7,6 @@ tags:
   - safari
   - firefox
   - chrome
-layout: layouts/post.njk
 ---
 
 ## The Background

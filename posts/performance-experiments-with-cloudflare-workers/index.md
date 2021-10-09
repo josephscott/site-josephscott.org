@@ -9,7 +9,6 @@ tags:
   - modheader
   - andy-davies
   - andrew-galloni
-layout: layouts/post.njk
 ---
 
 In the last few years both <a href="https://calendar.perfplanet.com/2019/prototyping-optimizations-with-cloudflare-workers-and-webpagetest/">Andrew Galloni</a> and <a href="https://andydavies.me/blog/2020/09/22/exploring-site-speed-optimisations-with-webpagetest-and-cloudflare-workers/">Andy Davies</a> have written about using <a href="https://workers.cloudflare.com/">Cloudflare Workers</a> to make experimental perfomance changes to production sites, and testing those changes with <a href="https://www.webpagetest.org/">WebPageTest</a>.  It was only recently that I finally tried it out, and it really is as good as they made it sound.

@@ -6,7 +6,6 @@ tags:
   - remy-sharp
   - web
   - alex-russell
-layout: layouts/post.njk
 ---
 In February 2021 [Remy Sharp](https://remysharp.com/) captured the feelings of many web developers in: [The web didn't change; you did](https://remysharp.com/2021/02/11/the-web-didnt-change-you-did) :
 
