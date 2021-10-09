@@ -62,6 +62,20 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // Tools collection
+  eleventyConfig.addCollection( "tools", function( collection ) {
+    let tool_set = new Set();
+    let tool_re = new RegExp( '^/tools/.*/' );
+
+    collection.getAllSorted().forEach( function( item ) {
+      if ( item.url.search( tool_re ) !== -1 ) {
+        tool_set.add( item );
+      }
+    });
+
+    return tool_set;
+  } );
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
