@@ -37,15 +37,15 @@ ttfb = ( rtt + dns ) + ( rtt + tcp ) + ( rtt + tls ) + ( rtt + http );
     </div>
 	<hr />
     <div>
-        <input type="text" class="dns calc" name="dns" value="5">
+        <input type="text" class="dns calc" name="dns" value="7">
         <label for="dns">DNS Server Time</label>
     </div>
     <div>
-        <input type="text" class="tcp calc" name="tcp" value="5">
+        <input type="text" class="tcp calc" name="tcp" value="3">
         <label for="tcp">TCP Server Time</label>
     </div>
     <div>
-        <input type="text" class="tls calc" name="tls" value="25">
+        <input type="text" class="tls calc" name="tls" value="50">
         <label for="tls">TLS Server Time</label>
     </div>
     <div>
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		let tls = parseInt( $qs( '.tls' ).value );
 		let http = parseInt( $qs( '.http' ).value );
 
-		let total = ( rtt + dns ) + ( rtt + tcp ) + ( rtt + tls ) + ( rtt + http );
+		let total = ( rtt * 4 ) + dns + tcp + tls + http;
 		total = new Intl.NumberFormat( 'en-US' ).format( total );
 		$qs( '#ttfb-total' ).innerText = total;
 	};
