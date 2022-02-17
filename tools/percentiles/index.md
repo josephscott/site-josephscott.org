@@ -6,7 +6,7 @@ title: Percentiles
 Provide a space separated list of numbers.
 </p>
 
-<textarea class="numbers"></textarea>
+<textarea class="numbers" cols="50" rows="10"></textarea>
 
 <p class="results">
 
