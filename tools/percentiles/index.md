@@ -2,11 +2,17 @@
 title: Percentiles
 ---
 
+<style>
+.numbers {
+	width: 90%;
+}
+</style>
+
 <p>
 Provide a space or new line separated list of numbers.
 </p>
 
-<textarea class="numbers" cols="50" rows="10"></textarea>
+<textarea class="numbers" rows="10"></textarea>
 
 <p class="results"></p>
 
