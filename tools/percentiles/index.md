@@ -2,17 +2,11 @@
 title: Percentiles
 ---
 
-<style>
-.numbers {
-	width: 90%;
-}
-</style>
-
 <p>
 Provide a space or new line separated list of numbers.
 </p>
 
-<textarea class="numbers" rows="10"></textarea>
+<textarea class="numbers" cols="35" rows="10"></textarea>
 
 <p class="results"></p>
 
@@ -24,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	let results_el = $qs( '.results' );
 
 	let do_percentiles = ( event ) => {
-		let p = 50;
+		let out = '';
 		let numbers = event.target.value.trim().split( /\s+/ );
 
 		numbers.forEach( ( num, i ) => {
@@ -36,11 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		} );
 
-		numbers.sort( ( a, b ) => { return a - b } );
-		let index = ( p / 100 ) * numbers.length;
-		index = Math.floor( index );
+		[ 25, 50, 75, 90, 95 ].forEach( ( p ) => {
+			numbers.sort( ( a, b ) => { return a - b } );
+			let index = ( p / 100 ) * numbers.length;
+			index = Math.floor( index );
 
-		results_el.innerText = `p50 = ${numbers[index]}`;
+			out += `p${p} = ${numbers[index]}\n`;
+		} );
+
+		results_el.innerText = out;
 	}
 
 	numbers_el.addEventListener( 'input', do_percentiles );
