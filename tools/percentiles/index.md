@@ -8,9 +8,7 @@ Provide a space separated list of numbers.
 
 <textarea class="numbers" cols="50" rows="10"></textarea>
 
-<p class="results">
-
-</p>
+<p class="results"></p>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
