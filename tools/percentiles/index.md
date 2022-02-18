@@ -30,15 +30,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		} );
 
-		[ 25, 50, 75, 90, 95 ].forEach( ( p ) => {
-			numbers.sort( ( a, b ) => { return a - b } );
-			let index = ( p / 100 ) * numbers.length;
-			index = Math.floor( index );
+		numbers.sort( ( a, b ) => { return a - b } );
 
-			out += `p${p} = ${numbers[index]}\n`;
+		out = " --- Ranked ---\n";
+		[ 25, 50, 75, 90, 95 ].forEach( ( p ) => {
+			p_decimal = p / 100;
+
+			// Ranked method
+			let index = p_decimal * numbers.length;
+			index = Math.floor( index );
+			let ranked = numbers[index];
+			ranked = new Intl.NumberFormat( 'en-US', {} ).format( ranked );
+
+			out += `p${p} = ${ranked}\n`;
 		} );
 
-		results_el.innerText = out;
+		results_el.innerText += out;
 	}
 
 	numbers_el.addEventListener( 'input', do_percentiles );
