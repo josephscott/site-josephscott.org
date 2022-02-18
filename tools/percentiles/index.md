@@ -2,13 +2,26 @@
 title: Percentiles
 ---
 
+<style>
+.container {
+	display: grid;
+	grid-template-columns: 0.7fr 1.3fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0px 1em;
+	grid-template-areas:
+		". ."
+		". .";
+}
+</style>
+
 <p>
 Provide a space or new line separated list of numbers.
 </p>
 
-<textarea class="numbers" cols="35" rows="10"></textarea>
-
-<p class="results"></p>
+<div class="container">
+	<textarea class="numbers" cols="35" rows="10" autofocus></textarea>
+	<div class="results"></div>
+</div>
 
 <script>
 document.addEventListener( 'DOMContentLoaded', function() {
