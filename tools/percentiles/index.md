@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			out += `p${p} = ${ranked}\n`;
 		} );
 
-		results_el.innerText += out;
+		results_el.innerText = out;
 	}
 
 	numbers_el.addEventListener( 'input', do_percentiles );
