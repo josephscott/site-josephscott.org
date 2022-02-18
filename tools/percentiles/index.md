@@ -12,6 +12,9 @@ title: Percentiles
 		". ."
 		". .";
 }
+.numbers {
+	height: 405px;
+}
 </style>
 
 <p>
