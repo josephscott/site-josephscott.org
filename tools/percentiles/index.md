@@ -11,7 +11,7 @@ Provide a space or new line separated list of numbers.
 <p class="results"></p>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener( 'DOMContentLoaded', function() {
 	let $qs = document.querySelector.bind( document );
 
 	let numbers_el = $qs( '.numbers' );
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	let do_percentiles = ( event ) => {
 		let out = '';
+		let levels = [ 25, 50, 75, 90, 95, 99 ];
 		let numbers = event.target.value.trim().split( /\s+/ );
 
 		numbers.forEach( ( num, i ) => {
@@ -32,16 +33,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		numbers.sort( ( a, b ) => { return a - b } );
 
-		out = " --- Ranked ---\n";
-		[ 25, 50, 75, 90, 95 ].forEach( ( p ) => {
+		out += " --- Interpolated ---\n"
+		levels.forEach( ( p ) => {
 			p_decimal = p / 100;
 
-			// Ranked method
+			let index = p_decimal * ( numbers.length - 1 ),
+				lower = Math.floor( index ),
+				remainder = index - lower;
+
+			let interp = numbers[lower];
+			if ( numbers[lower + 1] !== undefined ) {
+				interp = numbers[lower] + (
+					remainder * ( numbers[lower + 1] - numbers[lower] )
+				);
+			}
+
+			interp = new Intl.NumberFormat( 'en-US', {} ).format( interp );
+			out += `p${p} = ${interp}\n`;
+		} );
+
+		out += " --- Ranked ---\n";
+		levels.forEach( ( p ) => {
+			p_decimal = p / 100;
+
 			let index = p_decimal * numbers.length;
 			index = Math.floor( index );
 			let ranked = numbers[index];
-			ranked = new Intl.NumberFormat( 'en-US', {} ).format( ranked );
 
+			ranked = new Intl.NumberFormat( 'en-US', {} ).format( ranked );
 			out += `p${p} = ${ranked}\n`;
 		} );
 
@@ -49,5 +68,5 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	numbers_el.addEventListener( 'input', do_percentiles );
-});
+} );
 </script>
