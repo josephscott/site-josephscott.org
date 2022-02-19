@@ -36,8 +36,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	let do_percentiles = ( event ) => {
 		let out = '';
 		let levels = [ 25, 50, 75, 90, 95, 99 ];
-		let numbers = event.target.value.trim().split( /\s+/ );
+		let numbers = event.target.value.trim();
 
+		if ( numbers.indexOf( ',' ) !== -1 ) {
+			numbers = numbers.replaceAll( ',', '' );
+		}
+
+		numbers = numbers.split( /\s+/ );
 		numbers.forEach( ( num, i ) => {
 			let parsed_num = Number( num );
 			if ( !isNaN( parsed_num ) ) {
