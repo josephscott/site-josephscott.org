@@ -18,7 +18,7 @@ title: Percentiles
 </style>
 
 <p>
-Provide a space or new line separated list of numbers.
+Provide list of numbers, separated by: spaces, newlines, or commas ( CSV ).
 </p>
 
 <div class="container">
