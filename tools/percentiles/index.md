@@ -39,7 +39,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		let numbers = event.target.value.trim();
 
 		if ( numbers.indexOf( ',' ) !== -1 ) {
-			numbers = numbers.replaceAll( ',', '' );
+			numbers = numbers.replaceAll( ',', ' ' );
 		}
 
 		numbers = numbers.split( /\s+/ );
