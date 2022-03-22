@@ -25,7 +25,7 @@
 
 html,
 body {
-  padding: 0 0 30px 0;
+  padding: 0;
   margin: 0;
   font-family: -apple-system, system-ui, sans-serif;
   font-size: 1.1rem;
@@ -77,17 +77,21 @@ main {
 main :first-child {
   margin-top: 0;
 }
-header {
+header, footer {
     color: #fff;
     background-color: var(--main-color);
     box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
     padding: 5px;
     z-index: 2;
 }
-header:after {
+header:after, footer:after {
   content: "";
   display: table;
   clear: both;
+}
+footer {
+	margin: 50px 0 0 0;
+	padding: 20px 5px;
 }
 table {
   margin: 1em 0;
@@ -455,7 +459,10 @@ pre[class*="language-"] {
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+	<p>Copyright {{ helpers.currentYear() }} Joseph Scott</p>
+	<hr />
+	</footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
