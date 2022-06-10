@@ -9,8 +9,8 @@ const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
+// eleventyConfig.addPassthroughCopy("img");
+// eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("files");
 
   // Add plugins
@@ -120,7 +120,13 @@ module.exports = function(eleventyConfig) {
       "njk",
       "html",
       "liquid",
-      "js"
+      "js",
+      "js",
+      "png",
+      "jpg",
+      "webp",
+      "avif",
+      "jxl"
     ],
 
     // -----------------------------------------------------------------
