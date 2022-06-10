@@ -8,14 +8,16 @@ const markdownItAnchor = require("markdown-it-anchor");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function(eleventyConfig) {
+  // Copy the `img` and `css` folders to the output
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("files");
+
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(embedYouTube);
-
-  // https://www.11ty.dev/docs/data-deep-merge/
-  eleventyConfig.setDataDeepMerge(true);
 
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -76,11 +78,6 @@ module.exports = function(eleventyConfig) {
     return tool_set;
   } );
 
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("files");
-
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
@@ -123,12 +120,7 @@ module.exports = function(eleventyConfig) {
       "njk",
       "html",
       "liquid",
-      "js",
-      "png",
-      "jpg",
-      "webp",
-      "avif",
-      "jxl"
+      "js"
     ],
 
     // -----------------------------------------------------------------
