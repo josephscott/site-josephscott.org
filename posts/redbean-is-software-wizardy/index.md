@@ -18,13 +18,13 @@ $ chmod 755 redbean.com
 $ ./redbean.com
 ```
 
-Then visit `http://127.0.0.1:8080/`.  The documentation at `http://127.0.0.1:8080/help.txt` covers the details of what redbean can do.
+Then visit `http://127.0.0.1:8080/`.  The documentation at `http://127.0.0.1:8080/help.txt` covers the details of what Redbean can do.
 
 Oh, and it comes with TLS support out of the box, using an automatically generated self signed certificate by default.  Meaning those three commands above already include HTTPS.  That self signed certificate will generate a warning in browsers, Chrome says `NET::ERR_CERT_AUTHORITY_INVALID`.
 
 But wait, there is more!
 
-> redbean uses a protocol polyglot for serving HTTP and HTTPS on the same port numbers.
+> Redbean uses a protocol polyglot for serving HTTP and HTTPS on the same port numbers.
 
 You read that right, it supports HTTP and HTTPS on the same port.  Going to `https://127.0.0.1:8080/` works right away.  Not something I'd generally look at for regular production services, but it makes getting things started locally very easy.
 
